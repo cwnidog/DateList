@@ -20,10 +20,13 @@ int main(int argc, const char *argv[])
     // Create an arrary containing all three
     NSArray *dateList = @[now, tomorrow, yesterday];
     
-    // Print some dates
-    NSLog(@"The first date (now) is: %@", dateList[0]);
-    NSLog(@"The third date (yesterday) is: %@", dateList[2]);
-    NSLog(@"There are %lu dates in the date list.", [dateList count]);
+    // iterate over the array
+    NSUInteger dateCount = [dateList count];
+    for (int i = 0; i < dateCount; i++)
+    {
+      NSDate *d = dateList[i];
+      NSLog(@"Here is a date: %@", d);
+    }
   } // autoresponsepool
   
     return 0;
